@@ -1,3 +1,7 @@
+header {
+  background-color: #212529 !important;
+}
+
 .nav-link {
   color: white;
 }
@@ -27,6 +31,10 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+table {
+  background-color: #212529 !important;
 }
 
 .high {
