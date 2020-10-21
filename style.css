@@ -33,20 +33,23 @@ footer {
   width: 100%;
 }
 
-table {
+/* table {
   background-color: #212529 !important;
-}
+} */
 
 .high {
-  background-color: red;
+  background-color: rgb(255, 0, 0, 0.5);
+  margin-top: 2px;
 }
 
-.med {
-  background-color: orange;
+.mid {
+  background-color: rgb(255, 119, 0, 0.5);
+  margin-top: 2px;
 }
 
 .low {
-  background-color: yellow;
+  background-color: rgb(255, 247, 0, 0.5);
+  margin-top: 2px;
 }
 
 #todobtn {

@@ -26,21 +26,21 @@ var newItem = new toDoItem (title, category, priority)
 console.log(newItem.priority)
 
 if (newItem.priority == "high") {
-$("#addhigh").before(`<tr>
+$("#addhigh").before(`<tr class = "high">
 <td>${newItem.title}</td>
 <td>${newItem.category = newItem.category.charAt(0).toUpperCase() + newItem.category.slice(1)}</td>
 <td>${newItem.priority.charAt(0).toUpperCase() + newItem.priority.slice(1)}</td>
 </tr>`)
 }
 if (newItem.priority == "mid") {
-$("#addmid").before(`<tr>
+$("#addmid").before(`<tr class = "mid">
 <td>${newItem.title}</td>
 <td>${newItem.category = newItem.category.charAt(0).toUpperCase() + newItem.category.slice(1)}</td>
 <td>${newItem.priority.charAt(0).toUpperCase() + newItem.priority.slice(1)}</td>
 </tr>`)
 }
 if (newItem.priority == "low") {
-$("#addlow").before(`<tr>
+$("#addlow").before(`<tr class = "low">
 <td>${newItem.title}</td>
 <td>${newItem.category = newItem.category.charAt(0).toUpperCase() + newItem.category.slice(1)}</td>
 <td>${newItem.priority.charAt(0).toUpperCase() + newItem.priority.slice(1)}</td>
