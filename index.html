@@ -32,28 +32,28 @@
               <div class="form-group">
                 <label for="category">Example select</label>
                 <select class="form-control" id="category">
-                  <option>Family</option>
-                  <option>Social</option>
-                  <option>School</option>
-                  <option>Work</option>
-                  <option>Other</option>
+                  <option value = "family">Family</option>
+                  <option value = "social">Social</option>
+                  <option value = "school">School</option>
+                  <option value = "work">Work</option>
+                  <option value = "other">Other</option>
                 </select>
               </div>
+              <p>Priority Level</p>
               <div class="form-check">
-                  <p>Priority Level</p>
-                <input class="form-check-input" type="radio" name="radios" id="high" value="option1" checked>
+                <input class="form-check-input" type="radio" name="radios" id="high" value="high" checked>
                 <label class="form-check-label" for="high">
                     High Priority
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="radios" id="mid" value="option2">
+                <input class="form-check-input" type="radio" name="radios" id="mid" value="mid">
                 <label class="form-check-label" for="mid">
                     Mid Priority
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="radios" id="low" value="option3">
+                <input class="form-check-input" type="radio" name="radios" id="low" value="low">
                 <label class="form-check-label" for="low">
                   Low Priority
                 </label>
@@ -64,7 +64,6 @@
     <table id = "todotable" class="card table-dark">
         <thead>
           <tr>
-            <th scope="col">#</th>
             <th scope="col">To Do Item</th>
             <th scope="col">Priority</th>
             <th scope="col">Category</th>
@@ -72,23 +71,21 @@
         </thead>
         <tbody>
           <tr>
-            <tr>
-                <th scope="row">1</th>
+            <tr id = "addhigh">
                 <td>Turn in Final Paper for GIT 418</td>
                 <td>School</td>
                 <td>High</td>
-              </tr>
-            <th scope="row">2</th>
-            <td>Get the oil changed</td>
-            <td>Personal</td>
-            <td>Low</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Fill out field trip form for Adalie</td>
-            <td>Family</td>
-            <td>Mid</td>
-          </tr>
+            </tr>
+            <tr id = "addmid">
+                    <td>Fill out field trip form for Adalie</td>
+                    <td>Family</td>
+                    <td>Mid</td>
+                  </tr>
+            <tr id = "addlow">
+                <td>Get the oil changed</td>
+                <td>Personal</td>
+                <td>Low</td>
+            </tr>
         </tbody>
       </table>
     </div>
