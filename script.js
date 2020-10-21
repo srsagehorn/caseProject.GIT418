@@ -13,6 +13,7 @@ class toDoItem {
 // adds event listener to o buttoon
 $("#todobtn").on('click', function (event) {
 event.preventDefault()
+// setting variable from the input values (both selected and typed in) for the constructor
 const title = $("#title").val()
 const category = $("#category").val()
 levels.forEach(pri=> {
@@ -20,31 +21,17 @@ levels.forEach(pri=> {
         priority = pri
     }
 })
-
+// create a new class instance
 var newItem = new toDoItem (title, category, priority)
 
-console.log(newItem.priority)
-
-if (newItem.priority == "high") {
-$("#addhigh").before(`<tr class = "high">
-<td>${newItem.title}</td>
-<td>${newItem.category = newItem.category.charAt(0).toUpperCase() + newItem.category.slice(1)}</td>
-<td>${newItem.priority.charAt(0).toUpperCase() + newItem.priority.slice(1)}</td>
-</tr>`)
-}
-if (newItem.priority == "mid") {
-$("#addmid").before(`<tr class = "mid">
-<td>${newItem.title}</td>
-<td>${newItem.category = newItem.category.charAt(0).toUpperCase() + newItem.category.slice(1)}</td>
-<td>${newItem.priority.charAt(0).toUpperCase() + newItem.priority.slice(1)}</td>
-</tr>`)
-}
-if (newItem.priority == "low") {
-$("#addlow").before(`<tr class = "low">
-<td>${newItem.title}</td>
-<td>${newItem.category = newItem.category.charAt(0).toUpperCase() + newItem.category.slice(1)}</td>
-<td>${newItem.priority.charAt(0).toUpperCase() + newItem.priority.slice(1)}</td>
-</tr>`)
-}
-else {console.log("error")}
+// adds the new class content underneath the respective priority section
+levels.forEach(lev => {
+    if (newItem.priority == lev) {
+        $("#add"+ lev).before(`<tr class = ${lev}>
+        <td>${newItem.title}</td>
+        <td>${newItem.category = newItem.category.charAt(0).toUpperCase() + newItem.category.slice(1)}</td>
+        <td>${newItem.priority.charAt(0).toUpperCase() + newItem.priority.slice(1)}</td>
+        </tr>`)
+        }
+})
 })

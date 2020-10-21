@@ -11,87 +11,86 @@
 
     <title>418 Case Projects</title>
   </head>
-  <header>
-  <body>
-      <nav class = "navbar-dark bg-dark">
-    <ul class="nav justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link active" href="index.html">Chapter 7</a>
-        </li>
-      </ul>
-    </nav>
-</header>
-<main>
-    <h1 class = "textcenter">Create a To Do List</h1>
-    <div class = "col-md-8 center">
-        <form id = "todoform" class = "card" action="">
-            <div class="form-group">
-                <label for="title">Item name</label>
-                <input type="text" class="form-control" id="title" placeholder="Pick up kids from chool">
-              </div>
-              <div class="form-group">
-                <label for="category">Example select</label>
-                <select class="form-control" id="category">
-                  <option value = "family">Family</option>
-                  <option value = "social">Social</option>
-                  <option value = "school">School</option>
-                  <option value = "work">Work</option>
-                  <option value = "other">Other</option>
-                </select>
-              </div>
-              <p>Priority Level</p>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="radios" id="high" value="high" checked>
-                <label class="form-check-label" for="high">
-                    High Priority
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="radios" id="mid" value="mid">
-                <label class="form-check-label" for="mid">
-                    Mid Priority
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="radios" id="low" value="low">
-                <label class="form-check-label" for="low">
-                  Low Priority
-                </label>
-              </div>
-              <button id = "todobtn" class = "btn btn-dark"type = "submit">Add</button>
-        </form>
-        <div class="table-responsive">
-    <table id = "todotable" class="card">
-        <thead>
-          <tr>
-            <th scope="col">To Do Item</th>
-            <th scope="col">Priority</th>
-            <th scope="col">Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <tr class = "high" id = "addhigh">
-                <td>Turn in Final Paper for GIT 418</td>
-                <td>School</td>
-                <td>High</td>
-            </tr>
-            <tr class = "mid" id = "addmid">
-                    <td>Fill out field trip form for Adalie</td>
-                    <td>Family</td>
-                    <td>Mid</td>
-                  </tr>
-            <tr class = "low" id = "addlow">
-                <td>Get the oil changed</td>
-                <td>Personal</td>
-                <td>Low</td>
-            </tr>
-        </tbody>
-      </table>
-</main>
-<footer class = "textcenter">
-    <small >Shannon Sagehorn | © Copyright 2020</small>
-</footer>
+<body>
+    <header>
+        <nav class = "navbar-dark bg-dark">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                <a class="nav-link active" href="index.html">Chapter 7</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class = "textcenter">Create a To Do List</h1>
+        <div class = "col-md-8 center">
+            <form id = "todoform" class = "card">
+                <div class="form-group">
+                    <label for="title">Item name</label>
+                    <input type="text" class="form-control" id="title" placeholder="Pick up kids from chool">
+                </div>
+                <div class="form-group">
+                    <label for="category">Example select</label>
+                    <select class="form-control" id="category">
+                    <option value = "family">Family</option>
+                    <option value = "social">Social</option>
+                    <option value = "school">School</option>
+                    <option value = "work">Work</option>
+                    <option value = "other">Other</option>
+                    </select>
+                </div>
+                <p>Priority Level</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios" id="high" value="high" checked>
+                    <label class="form-check-label" for="high">
+                        High Priority
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios" id="mid" value="mid">
+                    <label class="form-check-label" for="mid">
+                        Mid Priority
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios" id="low" value="low">
+                    <label class="form-check-label" for="low">
+                    Low Priority
+                    </label>
+                </div>
+                <button id = "todobtn" class = "btn btn-dark" type = "submit">Add</button>
+            </form>
+            <table id = "todotable" class="card">
+                <thead>
+                <tr>
+                    <th scope="col">To Do Item</th>
+                    <th scope="col">Priority</th>
+                    <th scope="col">Category</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr class = "high" id = "addhigh">
+                        <td>Turn in Final Paper for GIT 418</td>
+                        <td>School</td>
+                        <td>High</td>
+                    </tr>
+                    <tr class = "mid" id = "addmid">
+                            <td>Fill out field trip form for Adalie</td>
+                            <td>Family</td>
+                            <td>Mid</td>
+                        </tr>
+                    <tr class = "low" id = "addlow">
+                        <td>Get the oil changed</td>
+                        <td>Personal</td>
+                        <td>Low</td>
+                    </tr>
+                </tbody>
+        </table>
+        </div>
+    </main>
+    <footer class = "textcenter">
+        <small >Shannon Sagehorn | © Copyright 2020</small>
+    </footer>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
