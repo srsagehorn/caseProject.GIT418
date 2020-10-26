@@ -2,7 +2,7 @@
 const levels = ["high", "mid", "low"]
 
 // establishes class
-class toDoItem {
+class ToDoItem {
     constructor(title, category, priority) {
       this.title = title;
       this.category = category;
@@ -22,7 +22,7 @@ levels.forEach(pri=> {
     }
 })
 // create a new class instance
-var newItem = new toDoItem (title, category, priority)
+var newItem = new ToDoItem (title, category, priority)
 
 // adds the new class content underneath the respective priority section
 levels.forEach(lev => {
