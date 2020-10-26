@@ -32,7 +32,7 @@ header {
 footer {
   background-color: #212529;
   color: white;
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
 }
@@ -63,4 +63,12 @@ footer {
 
 h2 {
   margin-top: 40px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+main {
+  margin-bottom: 80px;
 }
