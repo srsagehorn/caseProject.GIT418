@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>418 Case Projects</title>
+  </head>
+<body>
+    <header>
+        <nav class = "navbar-dark bg-dark">
+            <ul class="nav nav-tabs justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Chapter 7</a>
+                    </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="chpt8.html">Chapter 8</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class = "textcenter">Create a To Do List</h1>
+        <div class = "col-md-8 center">
+            <form id = "todoform" class = "card">
+                <div class="form-group">
+                    <label class = "bold" for="title">Item name</label>
+                    <input type="text" class="form-control" id="title" placeholder="Pick up kids from school">
+                </div>
+                <div class="form-group">
+                    <label class = "bold" for="category">Example select</label>
+                    <select class="form-control" id="category">
+                    <option value = "default">Select One</option>
+                    <option value = "family">Family</option>
+                    <option value = "social">Social</option>
+                    <option value = "school">School</option>
+                    <option value = "work">Work</option>
+                    <option value = "other">Other</option>
+                    </select>
+                </div>
+                <p class = "bold">Priority Level</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios" id="high" value="high" checked>
+                    <label class="form-check-label" for="high">
+                        High Priority
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios" id="mid" value="mid">
+                    <label class="form-check-label" for="mid">
+                        Mid Priority
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios" id="low" value="low">
+                    <label class="form-check-label" for="low">
+                    Low Priority
+                    </label>
+                </div>
+                <div>
+                    <br>
+                    <p class = "bold">Time</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="morning">
+                        <label class="form-check-label" for="morning">
+                          Morning
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="mid-Day">
+                        <label class="form-check-label" for="mid-Day">
+                          Mid-day
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="evening">
+                        <label class="form-check-label" for="evening">
+                          Evening
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="night">
+                        <label class="form-check-label" for="night">
+                          Night
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="no-Deadline">
+                        <label class="form-check-label" for="no-Deadline">
+                          No Deadline
+                        </label>
+                      </div>
+                </div>
+                <button id = "todobtn" class = "btn btn-dark" type = "submit">Add</button>
+            </form>
+            <h2 class = "textcenter">To Do List</h2>
+            <table id = "todotable" class="col-md-12">
+                <thead>
+                <tr>
+                    <th scope="col">To Do Item</th>
+                    <th scope="col">Get done by</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Priority</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr class = "high" id = "addhigh">
+                        <td>Turn in Final Paper for GIT 418</td>
+                        <td>Morning</td>
+                        <td>School</td>
+                        <td>High</td>
+                    </tr>
+                    <tr class = "mid" id = "addmid">
+                            <td>Fill out field trip form for Adalie</td>
+                            <td>Mid-day to Night</td>
+                            <td>Family</td>
+                            <td>Mid</td>
+                        </tr>
+                    <tr class = "low" id = "addlow">
+                        <td>Get the oil changed</td>
+                        <td>No Deadline</td>
+                        <td>Personal</td>
+                        <td>Low</td>
+                    </tr>
+                </tbody>
+        </table>
+        </div>
+    </main>
+    <footer class = "textcenter">
+        <small >Shannon Sagehorn | © Copyright 2020</small>
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <script src= "script.js"></script>
+  </body>
+</html>

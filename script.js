@@ -1,4 +1,4 @@
-// sets and array for priority levels to loop through later
+// sets and array for priority levels and times to loop through later
 const levels = ["high", "mid", "low"]
 const times = ["morning", "mid-Day", "evening", "night", "no-Deadline"]
 
