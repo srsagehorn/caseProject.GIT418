@@ -65,23 +65,29 @@ levels.forEach(lev => {
 
  // This array is for the latitude and longitude of the desired display location
 var coordsArray = [];
-// display location by finding longitude and latitude and triming the to two decimal points
+// get loongitude, latitude and altitude form user
 navigator.geolocation.getCurrentPosition(function (position) {
   let lat = position.coords.latitude;
   let long = position.coords.longitude;
-  console.log(lat, long)
-  coordsArray.push(lat)
+  let alt = position.coords.altitude;
+  // put these data points as text on the page
+  $("#lat").text(`latitude: ${lat.toFixed(2)}`)
+  $("#long").text(`longitude: ${long.toFixed(2)}`)
+  $("#alt").text(`altitude: ${alt}`)
+  // push the lat and long to the array for the map
+  coordsArray.push(lat, long)
+  //Creates the map object with the intended coordinates and sets zoom level to 14
+  if (coordsArray) {
   console.log(coordsArray)
-});
-//Creates the map object with the intended coordinates and sets zoom level to 14
-console.log(coordsArray)
-var map = L.map('map').setView(coordsArray, 14);
+  var map = L.map('map').setView(coordsArray, 14);
+  }
 
-//Creates the required WebGL metadata and chains it to the map object
-var gl = L.mapboxGL({
-    attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
-    accessToken: 'not-needed',
-    style: 'https://api.maptiler.com/maps/streets/style.json?key=qZjWTwtNTmBxDi3ZpTB5'
-}).addTo(map);
-//Creates the marker for the intended coordinates and chains it to the map object 
-var marker = L.marker(coordsArray).addTo(map);
+  //Creates the required WebGL metadata and chains it to the map object
+  var gl = L.mapboxGL({
+      attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
+      accessToken: 'not-needed',
+      style: 'https://api.maptiler.com/maps/streets/style.json?key=qZjWTwtNTmBxDi3ZpTB5'
+  }).addTo(map);
+  //Creates the marker for the intended coordinates and chains it to the map object 
+  var marker = L.marker(coordsArray).addTo(map);
+});
