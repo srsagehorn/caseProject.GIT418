@@ -92,14 +92,16 @@ navigator.geolocation.getCurrentPosition(function (position) {
   var marker = L.marker(coordsArray).addTo(map);
 });
 
+// create the url and api key variables
 var apiKey = "ucAPRqoFLqGb3Z3lOTqlwi4XB1ZXbznsT6gSVdim"
 var queryURL = "https://api.nasa.gov/planetary/apod?api_key=" + apiKey
 
 $.ajax({
+  // tell ajax to get the url info then place the data into a reponse variable
   url: queryURL,
   method: "GET",
 }).then(function (response) {
-  console.log (response)
+  // set the title, image src attribute, and image caption into the html
   $("#title").text(response.title)
   $("#pic").attr("src", response.hdurl)
   $("#caption").text(response.explanation)
