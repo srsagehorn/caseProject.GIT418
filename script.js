@@ -91,3 +91,16 @@ navigator.geolocation.getCurrentPosition(function (position) {
   //Creates the marker for the intended coordinates and chains it to the map object 
   var marker = L.marker(coordsArray).addTo(map);
 });
+
+var apiKey = "ucAPRqoFLqGb3Z3lOTqlwi4XB1ZXbznsT6gSVdim"
+var queryURL = "https://api.nasa.gov/planetary/apod?api_key=" + apiKey
+
+$.ajax({
+  url: queryURL,
+  method: "GET",
+}).then(function (response) {
+  console.log (response)
+  $("#title").text(response.title)
+  $("#pic").attr("src", response.hdurl)
+  $("#caption").text(response.explanation)
+})

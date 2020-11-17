@@ -80,3 +80,13 @@ main {
   margin-right: auto;
   margin-top: 40px;
 }
+
+#pic {
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#caption {
+  width: 70%;
+}
