@@ -106,3 +106,46 @@ $.ajax({
   $("#pic").attr("src", response.hdurl)
   $("#caption").text(response.explanation)
 })
+
+// start off with hidden not true
+let hidden = false
+
+// add a show hide function to the square
+$("#hide").on("click", function () {
+  // if it is already hidden, show the square, change the button text to find and set hidden to false
+  if (hidden) {
+  $("#square").show()
+  $("#hide").text("Hide")
+  hidden = false
+  }
+  // do the opposite if hidden is false
+  else {
+    $("#square").hide()
+    $("#hide").text("Find")
+    hidden = true
+  }
+})
+
+$("#fly").on("click", function () {
+    // animate the plane to fly to the right and fade out in 2 seconds
+    $("#plane").animate({ 
+      right: "-=600px",
+    }, "fast" );
+    $("#plane").css({'opacity' : `0`, 'transition-duration' : '2s'})
+    // after 2 seconds return it back to its original spot and opacity
+    setTimeout(
+      function() 
+      {
+        $("#plane").css({'opacity' : `1`, 'right' : '0', 'transition-duration' : ''})
+      }, 2000);
+})
+
+// set a starting number of rotations to multiply 360 by later
+let rotations = 1
+
+$("#spin").on("click", function () {
+  // add a css rotation and transitioon speed fo 1 second
+  $("#spiral").css({'transform' : `rotate(${360*rotations}deg)`, 'transition-duration' : '1s'});
+  // then add one to the rotation so it can rotate multiple times
+  rotations++
+})

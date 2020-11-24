@@ -101,3 +101,7 @@ main {
 .gal {
   margin: 30px;
 }
+
+#plane {
+  position: relative;
+}
