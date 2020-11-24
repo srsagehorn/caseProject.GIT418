@@ -37,10 +37,6 @@ footer {
   width: 100%;
 }
 
-/* table {
-  background-color: #212529 !important;
-} */
-
 .high {
   background-color: rgb(255, 0, 0, 0.5);
   margin-top: 2px;
@@ -89,4 +85,15 @@ main {
 
 #caption {
   width: 70%;
+}
+
+#square {
+  background-color: blue;
+  height: 200px;
+  width: 200px;
+}
+
+#plane,
+#spiral {
+  height: 200px;
 }
